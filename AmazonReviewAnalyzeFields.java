@@ -109,6 +109,9 @@ public class AmazonReviewAnalyzeFields extends Configured implements Tool {
 				// Now we parse the string into a JsonElement so we can dig into it
 				JsonElement jsonTree = parser.parse(jsonString);
 				
+				// Input My Code Here
+				
+				
 				// Now we'll iterate through every top-level "key" in the JSON structure...
 				for (Map.Entry<String, JsonElement> entry : jsonTree.getAsJsonObject().entrySet()) {
 					// When we write to "context" we're passing data to the reducer
