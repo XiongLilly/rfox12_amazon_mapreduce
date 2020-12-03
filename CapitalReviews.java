@@ -105,8 +105,7 @@ public class CapitalReviews extends Configured implements Tool {
         JsonElement jsonTree = parser.parse(jsonString);
         JsonObject jsonObject = jsonTree.getAsJsonObject();
 
-	// My Code      
-        // Review code example ==================================================
+	// My Added code for finding the count of positive and negative reivews with capitalized words (some or all)      
         double overallrating = jsonObject.get("overall").getAsDouble();
         String review_text = jsonObject.get("reviewText").getAsString();
         StringTokenizer st = new StringTokenizer(review_text);
@@ -118,10 +117,7 @@ public class CapitalReviews extends Configured implements Tool {
             words_cap.add(matcher.group());
         }
 
-        // System.out.println(words_cap);
-        // System.out.println("Count of words in String - "  +st2.countTokens());
-        // System.out.println("Count of words in String - "  +words_cap.size());
-        
+            
         int count = 0;
         
         if(overallrating == 1.0  || overallrating == 2.0){
